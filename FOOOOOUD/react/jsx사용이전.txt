@@ -1,0 +1,11 @@
+ <!-- const h3=React.createElement("h3",{
+        onMouseEnter:()=> console.log('mouse enter'),
+    },"hello");
+    
+
+
+    const btn=React.createElement("button",{
+        onClick: () =>console.log('im click'),
+    },
+    "Click me"
+    ); -->

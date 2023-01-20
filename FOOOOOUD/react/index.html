@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+    
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+  <script type="text/babel">
+    
+    const root=document.getElementById("root");
+
+    //Jsx
+
+    //use arrow function 1
+    const Button= ()=>(<button style={{
+        backgroundColor:"tomato",
+    }} 
+    onClick={() =>console.log('im click')}>
+        Click me
+    </button>);
+    
+    //use arrow function 2
+    const Title= ()=>(<h3 id="title" onMouseEnter={()=> console.log('mouse enter')}>
+        Hello im tittle</h3>);
+   
+    
+    //For rendering 
+    //컴포넌트를 다른 컴포넌트 안에 넣기
+    //Jsx는 여러 요소를 잘게 쪼개어 만들어 합치는 형식을 지원함
+    //Container가 각각 Title과 Button같은 (arrow function) 부분을 합치는 것 처럼
+    //(중요) 컴포넌트의 첫 글자는 반드시 대문자여야 함
+    const Container=()=>(
+        <div>
+            <Title />
+            <Button />
+        </div>
+        );    
+    //Jsx
+    ReactDOM.createRoot(root).render(<Container />);
+    //ReactDOM.render(Container,root);
+</script>
+
+
+
+</html>
