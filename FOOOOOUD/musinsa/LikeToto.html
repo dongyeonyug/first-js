@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label html="UserNum">UserNumber</label>
+
+        <form class="form">
+            <input maxlength="3" id="UserNum" placeholder="UserNum" type="number" oninput="checkMaxLength(this)" />
+
+        </form>
+
+
+    </div>
+
+    <div id="User_PcScore">
+        <span></span><br>
+        <span></span><br>
+        <span></span>
+    </div>
+
+    <script>
+        function checkMaxLength(object) {
+            if (object.value.length > object.maxLength) {
+                object.value = object.value.slice(0, object.maxLength);
+            }
+        }
+    </script>
+    <script src="random.js"></script>
+</body>
+
+
+
+
+</html>
